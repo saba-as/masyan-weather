@@ -28,12 +28,20 @@ function getData(search){
         },
         dataType: 'json',
         success: function(apiResponse) {
-         
+            
 
-            setData(apiResponse)
+            try{
+                setData(apiResponse)
 
+            }catch(ex){
+                $("#title").text('Please enter valid city')
+
+
+            }
+        
           
-        }
+        },
+       
       });
 }
 
